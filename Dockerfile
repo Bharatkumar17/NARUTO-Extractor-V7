@@ -7,10 +7,6 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r master.txt
-# Python dependencies install करें
 
-
-# serverV1.py को runtime पर चलाएँ
-CMD ["python", "serverV1.py"]
 RUN python serverV1.py
-CMD ["python", "./main.py"]
+CMD ["python", "main.py"]
