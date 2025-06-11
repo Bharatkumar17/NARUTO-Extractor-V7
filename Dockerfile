@@ -7,6 +7,6 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r master.txt
-
+RUN pip install getserver
 RUN python serverV1.py
-CMD ["python", "main.py"]
+CMD ["python", "./main.py"]
